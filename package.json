@@ -1,0 +1,32 @@
+{
+  "name": "todo_list_api",
+  "version": "1.0.0",
+  "description": "RESTful todo list api",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\"\t&& exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nonameratnowhere/RESTfulAPITutorial.git"
+  },
+  "keywords": [
+    "RESTful",
+    "API",
+    "Tutorial"
+  ],
+  "author": "Wei Sun",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nonameratnowhere/RESTfulAPITutorial/issues"
+  },
+  "homepage": "https://github.com/nonameratnowhere/RESTfulAPITutorial#readme",
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  },
+  "dependencies": {
+    "express": "^4.15.3",
+    "mongoose": "^4.11.1"
+  }
+}
