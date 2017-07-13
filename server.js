@@ -6,11 +6,15 @@ var express = require('express'),
   bodyParser = require('body-parser');
 
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost/Tododb');
+mongoose.connect('mongodb://localhost/Tododb', {
+  userMongoClient: true,
+});
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-
+app.use(function(req, res) {
+  res.status(404).send({url: req.originalUrl + ' not found.'});
+});
 var routes = require('./api/routes/toDoListRoutes')
 routes(app);
 
